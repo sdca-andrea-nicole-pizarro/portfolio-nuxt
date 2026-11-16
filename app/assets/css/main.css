@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* DaisyUI with one custom light theme: white surfaces, navy ink, light blue accents. */
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "andrea";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f4f9fe;
+  --color-base-300: #d9e8f5;
+  --color-base-content: #0f2740;
+
+  --color-primary: #9dd3f7;
+  --color-primary-content: #0f2740;
+  --color-secondary: #0f2740;
+  --color-secondary-content: #f4f9fe;
+  --color-accent: #1f74b8;
+  --color-accent-content: #ffffff;
+  --color-neutral: #0f2740;
+  --color-neutral-content: #f4f9fe;
+
+  --color-info: #5bb1eb;
+  --color-info-content: #0f2740;
+  --color-success: #52b788;
+  --color-success-content: #0f2740;
+  --color-warning: #f2c14e;
+  --color-warning-content: #0f2740;
+  --color-error: #e36464;
+  --color-error-content: #0f2740;
+
+  --radius-selector: 9999px;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Figtree", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-base-200);
+    color: var(--color-base-content);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
