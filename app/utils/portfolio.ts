@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import { House, User, FolderKanban, Mail } from 'lucide-vue-next'
+import { House, User, FolderKanban, Mail, GitBranch } from 'lucide-vue-next'
 
 export const siteProfile = {
   name: 'Andrea Nicole Pizarro',
@@ -25,4 +25,11 @@ export const siteNav: NavItem[] = [
   { label: 'About', to: '/about', icon: User },
   { label: 'Projects', to: '/projects', icon: FolderKanban },
   { label: 'Contact', to: '/contact', icon: Mail },
+]
+
+export type SocialItem = { label: string; href: string; icon: Component; external: boolean }
+
+export const siteSocials: SocialItem[] = [
+  { label: 'Email', href: `mailto:${siteProfile.email}`, icon: Mail, external: false },
+  { label: 'GitHub', href: siteProfile.github, icon: GitBranch, external: true },
 ]
