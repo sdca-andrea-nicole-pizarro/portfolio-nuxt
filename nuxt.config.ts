@@ -1,12 +1,22 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  // Tailwind CSS v4 + DaisyUI v5 are loaded from this stylesheet.
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
+  },
+
+  runtimeConfig: {
+    public: {
+      // Used for canonical links and Open Graph URLs.
+      // Override on Render with the NUXT_PUBLIC_SITE_URL environment variable.
+      siteUrl: 'https://andrea-nicole-pizarro-portfolio-kq4o.onrender.com',
+    },
   },
 
   app: {
