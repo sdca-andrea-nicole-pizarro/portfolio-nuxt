@@ -1,8 +1,7 @@
 <template>
-  <div class="min-h-screen bg-base-200 p-10">
-    <NuxtRouteAnnouncer />
-    <h1 class="text-4xl font-bold">Andrea Nicole Pizarro</h1>
-    <p class="mt-2 text-lg">Tailwind CSS and DaisyUI are working.</p>
-    <button class="btn btn-primary mt-6">DaisyUI button</button>
+  <div class="flex min-h-screen flex-col items-center justify-center gap-4 p-6 text-center">
+    <ProfileAvatar size="xl" />
+    <h1 class="text-4xl font-bold">{{ siteProfile.name }}</h1>
+    <p class="text-base-content/70">{{ siteProfile.title }}</p>
   </div>
 </template>
