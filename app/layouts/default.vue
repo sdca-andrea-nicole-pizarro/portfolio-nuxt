@@ -2,6 +2,9 @@
   <div class="min-h-screen">
     <a href="#main" class="skip-link">Skip to content</a>
 
+    <!-- Interactive canvas behind everything -->
+    <InteractiveBackground />
+
     <!-- Desktop sidebar -->
     <AppSidebar />
 
